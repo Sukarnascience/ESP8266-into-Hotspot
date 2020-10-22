@@ -11,7 +11,8 @@ void setup()
   Serial.begin(115200);
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
-  boolean Out = WiFi.softAP("LocalNetwork","sukarna jana");
+  boolean Out = WiFi.softAP("LocalNetwork","sukarna jana");// If You want to change you can change according to your convenient
+  //WiFi.softAP(SSID,PASS);
 
   if(Out==true)
   {
@@ -38,7 +39,7 @@ void loop()
   Serial.print("No. of Connection:-");
   Serial.println(WiFi.softAPgetStationNum());
   int Connection = WiFi.softAPgetStationNum();
-  for(int i=0; i<Connection; i++)
+  for(int i=0; i<Connection; i++)//it will help us to know how many device are connected to it
   {
     digitalWrite(LED_BUILTIN, LOW);
     delay(500);
